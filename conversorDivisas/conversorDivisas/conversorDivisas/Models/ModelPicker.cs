@@ -4,7 +4,7 @@ using System.Text;
 
 namespace conversorDivisas.Models
 {
-    public class ModeloPicker
+    public class ModelPicker
     {
         public string id { get; set; }
         public string nombreDivisa { get; set; }

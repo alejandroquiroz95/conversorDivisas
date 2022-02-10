@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace conversorDivisas.Models
 {
-    class ConnectionDB
+    public class ConnectionDB
     {
         public SQLiteConnection _database;
         private static object _collisionLock = new object();
@@ -24,7 +24,7 @@ namespace conversorDivisas.Models
             }
         }
 
-        public int Save(TableRecord table)
+        public int Save(ModelTableRecord table)
         {
             int _id = 0;
             int numReg = 0;
@@ -73,15 +73,15 @@ namespace conversorDivisas.Models
             _database.Execute(query);
         }
 
-        public ObservableCollection<TableRecord> GetHistorial(string query)
+        public ObservableCollection<ModelTableRecord> GetHistorial(string query)
         {
-            ObservableCollection<TableRecord> Historial = new ObservableCollection<TableRecord>(_database.Query<TableRecord>(query));
+            ObservableCollection<ModelTableRecord> Historial = new ObservableCollection<ModelTableRecord>(_database.Query<ModelTableRecord>(query));
             return Historial;
         }
 
         public void CreateTables()
         {
-            _database.CreateTable<TableRecord>();
+            _database.CreateTable<ModelTableRecord>();
         }
     }
 }

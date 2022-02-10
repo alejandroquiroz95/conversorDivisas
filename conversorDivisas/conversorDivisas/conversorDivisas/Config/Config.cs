@@ -11,10 +11,12 @@ namespace conversorDivisas.Config
         private string WS_LOGIN { get; set; }
         public static async Task<String> getWebService(String valor)
         {
-            String ruta = "http://18.216.125.131/" + valor;
+            string urlprincipal = "http://api.exchangeratesapi.io/v1/";
+            string password = "latest?access_key=bc7dba21855a8412e47921a997992103" + valor;
+            string urlFinal = urlprincipal + password + valor;
             HttpClient client = new HttpClient();
             client.Timeout = TimeSpan.FromMinutes(10);
-            var response = await client.GetStringAsync(ruta);
+            var response = await client.GetStringAsync(urlFinal);
 
             if (response != null){
                 return response;
