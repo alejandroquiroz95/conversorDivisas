@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:infra="clr-namespace:conversorDivisas.Infrastructure;assembly=conversorDivisas"
+             x:Class="conversorDivisas.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Locator -->
+            <infra:InstanceLocator x:Key="Locator"></infra:InstanceLocator>
+
+            <!-- colores -->
+            <Color x:Key="cd_negro">#000000</Color>
+            <Color x:Key="cd_blanco">#ffffff</Color>
+            <Color x:Key="cd_gris_1">#38383a</Color>
+            <Color x:Key="cd_gris_2">#a8a8aa</Color>
+            <Color x:Key="cd_gris_3">#58585a</Color>
+            
+            <!-- fuentes -->
+
+            
+            <!-- tamaño fuente -->
+            <x:Double x:Key="titulo">18</x:Double>
+            <x:Double x:Key="subtitulo">16</x:Double>
+            <x:Double x:Key="cuerpo">12</x:Double>
+            <x:Double x:Key="chica">8</x:Double>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
